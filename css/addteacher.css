@@ -1,0 +1,107 @@
+@font-face {
+    font-family: THSarabunNew;
+    src: url(font/THSarabunNew.ttf) format("truetype");
+}
+.header 
+{
+	font-family: 'THSarabunNew', sans-serif;
+    width: 100%;
+    height: 70px;
+    margin: 0px auto 100px;
+    color: black;
+    background: #EDEFF1;
+    box-shadow: -5px 3.5px 5px grey;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    padding: 0px;
+}
+.respond 
+{
+	border: 2px solid #000000;
+    width: 110px;
+    height: 40px;
+    position: relative;
+    left: -30px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    background: black;
+    top: -30px;
+    border-radius: 10px;
+    margin: 0px auto;
+    cursor: pointer;
+        }
+.hub 
+{
+    border: 2px solid #FFC000;
+    width: 65px;
+    height: 40px;
+    position: relative;
+    left: 45px;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    background: #FFC000;
+    top: 14px;
+    border-radius: 10px;
+    margin: 0px auto;
+    cursor: pointer;
+}
+body 
+{
+	font-family: 'THSarabunNew' ,sans-serif;
+	font-size: 120%;
+	background: #f8cbad;
+	margin: 0 auto;
+}
+
+form, .content 
+{
+    width: 400px;
+	height: auto;
+	max-height: 850px;
+	margin: 0px auto;
+	padding: 20px;
+	border: 1px solid #B0C4DE;
+	background: #EDEFF1;
+	position: relative;
+	top: 100px;
+}
+.btn2
+{
+    position: relative;
+    left: 130px;
+    top:15px;
+    height: 40px;
+	width: 130px;
+	padding: 5px;
+	font-size: 18px;
+	color: white;
+	background: #92d050;
+	border: none;
+	font-family: 'THSarabunNew', sans-serif;
+}
+.btn3
+{
+    position: absolute;
+    left: 800px;
+    top:407px;
+    height: 35px;
+	width: 140px;
+	padding: 10px;
+    font-size: 18px;
+    
+	color: white;
+	background: #fa8072;
+	border: none;
+	border-radius: 5px;
+	font-family: 'THSarabunNew', sans-serif;
+}
+.box
+{
+    position: relative;
+    width: 310px;
+}

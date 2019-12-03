@@ -1,0 +1,191 @@
+@font-face {
+    font-family: THSarabunNew;
+    src: url(font/THSarabunNew.ttf) format("truetype");
+}
+.start {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #3498db;
+  padding: 10px 20px 10px 20px;
+  position:relative;
+  top: -530px;
+  left:630px;
+  height: 60px;
+  width: 120px; 
+}
+.start :hover{
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+.reward {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #0fb6db;
+  padding: 10px 20px 10px 20px;
+  position:relative;
+  top: -460px;
+  left:496px;
+  height: 60px;
+  width: 140px;
+}
+.reward:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+.ql {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #767171;
+  padding: 10px 20px 10px 20px;
+  position:relative;
+  top: -390px;
+  left:335px;
+  height: 60px;
+  width: 170px;
+}
+.ql:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+.ss {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #7297e0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  position:relative;
+  top: -320px;
+  left:135px;
+  height: 60px;
+  width: 230px;
+}
+.ss:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+.create {
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  color: #ffffff;
+  font-size: 16px;
+  background: #1abc9c;
+  padding: 10px 20px 10px 20px;
+  position:relative;
+  top: -180px;
+  left:245px;
+  height: 50px;
+  width: 160px;
+  text-align: center;
+  line-height: 25px;
+}
+.create:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+}
+body 
+{
+  font-family: 'THSarabunNew' ,sans-serif;
+  font-size: 120%;
+  background: #e2a768;
+  margin: 0 auto;
+  text-align: center;
+}
+a{
+  font-family: 'THSarabunNew' ,sans-serif;
+  font-size: 32px;
+  color: white;
+}
+.header 
+{
+  font-family: 'THSarabunNew', sans-serif;
+    width: 100%;
+    height: 70px;
+    margin: 0px auto 100px;
+    color: black;
+    background: #EDEFF1;
+    box-shadow: -5px 3.5px 5px grey;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    padding: 0px;
+}
+.respond 
+{
+  border: 2px solid #000000;
+    width: 110px;
+    height: 40px;
+    position: relative;
+    left: -30px;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    background: black;
+    top: -30px;
+    border-radius: 10px;
+    margin: 0px auto;
+        }
+.hub 
+{
+    border: 2px solid #FFC000;
+    width: 65px;
+    height: 40px;
+    position: relative;
+    left: 45px;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    background: #FFC000;
+    top: 14px;
+    border-radius: 10px;
+    margin: 0px auto;
+}
+.logout
+{
+  position: relative;
+  left:-40px;
+  top:-375px;
+  height: 50px;
+  width: 300px;
+  padding: 0px;
+  font-size: 30px;
+  color: white;
+  border: none;
+  font-family: 'THSarabunNew', sans-serif;
+}
+
+
