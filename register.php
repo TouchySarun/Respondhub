@@ -28,15 +28,10 @@
 			<label>Student/Teacher ID</label>
 			<input style="width: 93%;height: 30px;"type="text" name="id" >
 		</div>
-
-
-			<div class="input-group">
-			<label>Email</label>
-			<input style="width: 93%;height: 30px;"type="email" name="email" >
+		<div class="input-group">
+		<label>Email</label>
+		<input style="width: 93%;height: 30px;"type="email" name="email" >
 		</div>
-		
-		
-		
 		<div class="input-group">
 			<label>Password</label>
 			<input style="width: 93%;height: 30px;"type="password" name="password_1">
@@ -45,7 +40,6 @@
 			<label>Confirm Password</label>
 			<input style="width: 93%;height: 30px;"type="password" name="password_2">
 		</div>
-		
 		<div style="position: relative;">
 		<input style="width: 29px;height: 30px;"type="checkbox" name="role" onclick="onlyOne(this)" value="teacher"><br>
 		<div style="position: relative;top: -40px;left: 40px;font-size: 25px;">Teacher</div>

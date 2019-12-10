@@ -1,6 +1,5 @@
 <!--Check session user-->
 <?php 
-
 	if (!isset($_SESSION['name'])) 
 	{
 		$_SESSION['msg'] = "You must log in first";
@@ -25,8 +24,6 @@ if(!empty($_GET['qlname']))
 {
     $qlname = $_GET['qlname'];
     $tname = $_SESSION['idST'];
-
-
     $qryinput3="SELECT *FROM qlid where qlname = '$qlname' && teacher ='$tname'";
     $result3= $mysqli->query($qryinput3);
     while ($row3 = $result3->fetch_array())
@@ -35,15 +32,11 @@ if(!empty($_GET['qlname']))
         $tid = $row3['teacher'];
      }
 }
-
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Start2</title>
- 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/start2.css">
 </head>
@@ -52,20 +45,17 @@ if(!empty($_GET['qlname']))
 		<div onclick="window.location.href='teacher.php'"class="hub">hub</div>
 		<div onclick="window.location.href='teacher.php'"class="respond">Respond</div>
 		<form action="start2.php?" method="get">
-
 			Teacher ID : <?php echo $tid;?> <br>
             Question ID : <?php echo $qlid; ?> <br>
-
-          <?php if(empty($_GET['start'])&&empty($_GET['end'])){?>
+          	<?php if(empty($_GET['start'])&&empty($_GET['end'])){?>
 			<a style="text-decoration: none;" class="btn" href="start3.php?qlname=<?php echo $qlname;?>&start=now">Start </a>
-		<?php }?>
-		<?php if(empty($_GET['end'])){?>
+			<?php }?>
+			<?php if(empty($_GET['end'])){?>
         	<a style="text-decoration: none;" class="btn2"href="start3.php?qlname=<?php echo $qlname;?>&end=now">Stop </a>
 			<?php }?>
-		<?php if(!empty($_GET['end'])){?>
+			<?php if(!empty($_GET['end'])){?>
 			<a style="text-decoration: none;" class="btn3"href="result.php?qlid=<?php echo $qlid;?>&finish=now">Result </a>
-			
-		<?php }?>
+			<?php }?>
 
 			<?php if(!empty($_GET['start']))
 			{
@@ -83,12 +73,8 @@ if(!empty($_GET['qlname']))
 			
 			?>
 			 </form> 
-			 <a style="position: fixed;bottom: 0;right: 20px;" href="teacher.php">
+ <a style="position: fixed;bottom: 0;right: 20px;" href="teacher.php">
 			<img border="0" alt="home" src="css/Home.png" width="75" height="75">
-		</a> 
-	
-	
-											</body>
-						</html>
-
-						<script>
+</a> 
+</body>
+</html>

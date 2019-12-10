@@ -1,6 +1,5 @@
 <!--Check session user-->
-<?php 
-	
+<?php 	
 	if (!isset($_SESSION['name'])) 
 	{
 		$_SESSION['msg'] = "You must log in first";
@@ -25,17 +24,17 @@
 	$qryinput="SELECT* FROM question where tid ='$ses'";
     $result= $mysqli->query($qryinput);
     while ($row = $result->fetch_array())
-     {
-	  if($_GET['qlname']==$row['qlname'])
-	  {
+    {
+		if($_GET['qlname']==$row['qlname'])
+	  	{
 		  $check = true;
-	  }
-     }    
+	  	}
+    }    
 
-	 if($check==true)
-	 {
+	if($check==true)
+	{
 		echo "<script>location='questionsuite.php?error=exist'</script>";
-	 }
+	}
 
 
     if($_GET['qlname']=='')
@@ -45,18 +44,15 @@
 	}
 	else if($_GET['qlname']==trim($_GET['qlname']) && strpos($_GET['qlname'],' ')==true)
 	{
-			echo "<script>location='questionsuite.php?error=space'</script>";
+		echo "<script>location='questionsuite.php?error=space'</script>";
 	}
-		else if (!ctype_alnum($_GET['qlname']))
-		{
-			echo "<script>location='questionsuite.php?error=special'</script>";
-		}
+	else if (!ctype_alnum($_GET['qlname']))
+	{
+		echo "<script>location='questionsuite.php?error=special'</script>";
+	}
 	else
 	{
 		$qlname = $_GET['qlname'];
 		echo "<script>location='createquestion.php?qlname=$qlname'</script>";
 	}
-
-
-
 ?>

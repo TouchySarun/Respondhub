@@ -1,6 +1,5 @@
 <!--Check session user-->
 <?php 
-	
 	if (!isset($_SESSION['name'])) 
 	{
 		$_SESSION['msg'] = "You must log in first";
@@ -18,16 +17,10 @@
 ?>
 <!--Coneect DB-->
 <?php include "connect.php"; ?>
-
-
-    <?php
-
-$rid = $_GET['rid'];
-
-   $qryinput="DELETE FROM reward WHERE id=$rid";
-   $mysqli->query($qryinput);
-
-
+<?php
+	$rid = $_GET['rid'];
+   	$qryinput="DELETE FROM reward WHERE id=$rid";
+   	$mysqli->query($qryinput);
 ?>
 
 

@@ -1,6 +1,5 @@
 <!--Check session user-->
 <?php 
-	
 	if (!isset($_SESSION['name'])) 
 	{
 		$_SESSION['msg'] = "You must log in first";
@@ -18,12 +17,10 @@
 ?>
 <!--Coneect DB-->
 <?php include "connect.php"; ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>ViewQ</title>
-
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/viewq.css">
 </head>
@@ -31,16 +28,16 @@
 	<div class="header">
 		<div onclick="window.location.href='teacher.php'"class="hub">hub</div>
 		<div onclick="window.location.href='teacher.php'"class="respond">Respond</div>
-
+	</div>
 <?php
 		$qlname = $_GET['qlname'];
         $qryinput="SELECT* FROM question where qlname = '$qlname'";
-       $result= $mysqli->query($qryinput);
-       echo "<div class='sl'>";
-    echo 'Question list name : '.$qlname.'<br>';
-    echo "</div>";
-    echo "<form>";
-     while ($row = $result->fetch_array())
+       	$result= $mysqli->query($qryinput);
+       	echo "<div class='sl'>";
+    	echo 'Question list name : '.$qlname.'<br>';
+    	echo "</div>";
+    	echo "<form>";
+     	while ($row = $result->fetch_array())
     	{          
             echo "<h3>";       
             echo $row['question'].'<br>';
@@ -81,15 +78,11 @@
             echo  " [+".$row['pluspoint'].", -".$row['losepoint']."]"."<br>";
             echo "<br>";
         } 
-        echo "</form>";
-                               
+        echo "</form>";                         
     ?>
-	
     </form>
 	<a style=" position: fixed;bottom: 0;right: 20px;" href="teacher.php">
 			<img border="0" alt="home" src="css/Home.png" width="75" height="75">
-		</a> 
-	
-
+	</a> 
 </body>
 </html>

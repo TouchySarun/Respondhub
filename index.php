@@ -4,6 +4,6 @@
 	<title>index</title>
 </head>
 <body>
-<?php 		echo "<script>location='login.php'</script>"; ?>
+<?php echo "<script>location='login.php'</script>"; ?>
 </body>
 </html>

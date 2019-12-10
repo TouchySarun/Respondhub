@@ -4,11 +4,8 @@
 
 	$errors = array(); 
 	$_SESSION['success'] = "";
-
-	
-	
-	//$db = mysqli_connect('localhost', 'root', '', 'se');
-$db = mysqli_connect('localhost', 'u358418471_same', '123456', 'u358418471_se');
+	$db = mysqli_connect('localhost', 'root', '', 'se');
+	//$db = mysqli_connect('localhost', 'u358418471_same', '123456', 'u358418471_se');
 	if (isset($_POST['reg_user'])) 
 	{
 		$name = mysqli_real_escape_string($db, $_POST['name']);

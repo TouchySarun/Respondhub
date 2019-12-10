@@ -1,6 +1,5 @@
 <!--Check session user-->
 <?php 
-
 	if (!isset($_SESSION['name'])) 
 	{
 		$_SESSION['msg'] = "You must log in first";
@@ -22,40 +21,37 @@
 <html>
 <head>
 	<title>Home</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/student.css">
+		<link rel="stylesheet" type="text/css" href="css/student.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="header">
 		<div onclick="window.location.href='student.php'"class="hub">hub</div>
 		<div onclick="window.location.href='student.php'"class="respond">Respond</div>
-
 	</div>
 	<?php $qryinput="SELECT* FROM users";
     $result= $mysqli->query($qryinput);
     while ($row = $result->fetch_array())
-     {
+    {
        if($row['idST'] ==$_SESSION['idST'])
         {
            $name = $row['name'];
         }
-     }    
+    }    
      ?>   
 	 
-
     <div class="student">
 	<div style="margin-left:auto;margin-right:auto;position: relative;top:-10px;left: 10px ;"><img style="width: 129px;height: 129px;" src="css/studentpic.png"></div>
 	<div>
-	<span style="position: relative;top: -127px;left: 190px;font-size: 27px;color:black;font-weight: bold;"><?php echo $name;?></span><br>
-	<input type="button" style ="top:-32px;"class="addT" value="Add Teacher" onclick="window.location.href='addteacher.php'" />
-	<input type="button" style ="top:10px;left:16px" class="Dq" value="Do Question" onclick="window.location.href='doquestion.php'" />
-	<input type="button" style ="top:-72px;left:190px" class="addT" value="View Point" onclick="window.location.href='viewp.php'" />
-	<input type="button" style ="top:-30px;left:-155px" class="Dq" value="Reward" onclick="window.location.href='reward.php'" />
-	<a class="logout" href="student.php?logout='1'" style="color: red; font-size:30px;">logout</a> 
+		<span style="position: relative;top: -127px;left: 190px;font-size: 27px;color:black;font-weight: bold;"><?php echo $name;?></span><br>
+		<input type="button" value="Add Teacher" onclick="window.location.href='addteacher.php'" />
+		<input type="button"  value="Do Question" onclick="window.location.href='doquestion.php'" />
+		<input type="button"  value="View Point" onclick="window.location.href='viewp.php'" />
+		<input type="button" value="Reward" onclick="window.location.href='reward.php'" />
+		<a  href="student.php?logout='1'" style="color: red; font-size:30px;">logout</a> 
 	</div>
-	<?php 
 
+<?php 
 if(!empty($_GET['qlid']) && !empty($_GET['tname']))
 {
 	$qlid = $_GET['qlid'];
@@ -120,37 +116,25 @@ if(!empty($_GET['qlid']) && !empty($_GET['tname']))
 		 }
 		 echo "</form>";
 }
-	
-
-
-
-
-
 		 if($i==$count && empty($qid))
 		 {
-			
 			echo "<script>location='result.php?qlid=$qlid&finish=now'</script>";
-	
 		 }
 	 
-	}else{
-	
+	}
+	else
+	{
 		echo "<span class='err' style='color:red;'>";
 		echo "Wait for teacher click Start then, press F5 or Refresh page";
 		echo "</span>";
 	}
-
-	
-
 }
 ?>
-	
 	<p>
 		<a style=" position: fixed;bottom: 0;right: 20px;" href="student.php">
 			<img border="0" alt="home" src="css/Home.png" width="75" height="75">
 		</a>
 	</p>
-
 </body>
 </html>
 
